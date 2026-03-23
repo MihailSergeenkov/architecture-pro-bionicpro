@@ -1,2 +1,6 @@
 /postgres-keycloak-data
+/postgres-keycloak-data1
 2024__yandex-architecture-sso.code-workspace
+
+**/__pycache__
+minio
