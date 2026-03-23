@@ -177,6 +177,8 @@ services:
         pip install --no-cache-dir -r /requirements.txt &&
         airflow db migrate &&
         airflow users create --username admin2 --password admin2 --firstname Admin --lastname User --role Admin --email admin2@example.com || true &&
+        airflow connections add crm_postgres --conn-type postgres --conn-host crm_db --conn-login crm_user --conn-password crm_pass --conn-schema crm --conn-port 5432 || true &&
+        airflow connections add telemetry_postgres --conn-type postgres --conn-host telemetry_db --conn-login telemetry_user --conn-password telemetry_pass --conn-schema telemetry --conn-port 5432 || true &&
         exec airflow standalone
       "
     ports:

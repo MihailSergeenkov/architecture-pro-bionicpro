@@ -153,6 +153,7 @@
         "defaultClientScopes": [
           "web-origins",
           "role_list",
+          "basic",
           "profile",
           "email"
         ],
